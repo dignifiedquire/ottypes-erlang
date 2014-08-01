@@ -1,6 +1,6 @@
 {application, ottypes,
  [{description, "ottypes in erlang"},
-  {vsn, "%VSN%"},
+  {vsn, "0.1.0"},
   {modules, []},
   {registered,[]},
   {applications, [kernel]},
