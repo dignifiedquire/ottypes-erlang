@@ -8,7 +8,7 @@
 
 %% Types
 
--type text_op() :: binary() | {d, binary()} | integer().
+-type text_op() :: binary() | {d, integer()} | integer().
 
 %% API
 
@@ -19,7 +19,7 @@ apply(Content, Ops) ->
     NewContent.
 
 
--spec apply_op(text_op(), {binary(), integer()}) -> binary().
+-spec apply_op(text_op(), {binary(), integer()}) -> {binary(), integer()}.
 apply_op(Ins, {Text, Pos}) when is_binary(Ins) ->
     %% "some text" insertion
     Head = part(Text, 0, Pos - 1),
@@ -43,7 +43,6 @@ apply_op({d, Length}, {Text, Pos}) ->
 %% Internal Functions
 
 -spec part(binary(), integer()) -> binary().
-
 part(Input, From) ->
     binary:part(Input, From, byte_size(Input) - From).
 
