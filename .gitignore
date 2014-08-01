@@ -1,1 +1,11 @@
+.eunit
+deps
+*.o
 *.beam
+*.plt
+erl_crash.dump
+relx
+_rel
+logs
+.erlang.mk.packages.v2
+rel

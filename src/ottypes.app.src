@@ -1,0 +1,7 @@
+{application, ottypes,
+ [{description, "ottypes in erlang"},
+  {vsn, "%VSN%"},
+  {modules, []},
+  {registered,[]},
+  {applications, [kernel]},
+  {env, []}]}.
